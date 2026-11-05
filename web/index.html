@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="UnderScore is a composer-side arranger for adaptive game music: one theme, four synchronized intensity layers, bar-quantized transitions."
+    />
+    <title>UnderScore — one theme, every intensity</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">U</span>
+          <span>UnderScore</span>
+        </div>
+        <p class="kicker">Adaptive music / composer-side tooling</p>
+        <h1>One theme.<br /><em>Every intensity.</em></h1>
+        <p class="lede">
+          A composer writes the theme once. UnderScore writes the missing battle layers.
+          The game conductor schedules them on the next bar, not the next frame.
+        </p>
+      </header>
+
+      <section class="stage-wrap" aria-label="Adaptive music demo">
+        <div class="stage-bar">
+          <div class="stage-status">
+            <span class="status-dot"></span>
+            <span id="status">Score not started</span>
+          </div>
+          <div class="stage-actions">
+            <button id="start" class="solid">Start the score</button>
+            <button id="boss" class="ghost" aria-pressed="false">Summon boss</button>
+          </div>
+        </div>
+
+        <div class="stage">
+          <canvas id="game" width="1024" height="640" aria-label="Adaptive music game scene"></canvas>
+          <div class="now-playing">
+            <p class="micro">TARGET INTENSITY</p>
+            <div class="intensity-name" id="intensity">Exploration</div>
+            <p class="clock" id="clock">Next bar in —</p>
+          </div>
+          <div class="controls">WASD / arrows to move · enemies close in · the score changes on the bar</div>
+        </div>
+
+        <div class="layers" id="layers">
+          <div class="layer" data-layer="exploration">
+            <span class="layer-index">00</span>
+            <span class="layer-name">Exploration</span>
+            <span class="layer-meter"><i></i></span>
+            <span class="layer-state">lead + pad</span>
+          </div>
+          <div class="layer" data-layer="alert">
+            <span class="layer-index">01</span>
+            <span class="layer-name">Alert</span>
+            <span class="layer-meter"><i></i></span>
+            <span class="layer-state">+ bass</span>
+          </div>
+          <div class="layer" data-layer="combat">
+            <span class="layer-index">02</span>
+            <span class="layer-name">Combat</span>
+            <span class="layer-meter"><i></i></span>
+            <span class="layer-state">+ drums</span>
+          </div>
+          <div class="layer" data-layer="boss">
+            <span class="layer-index">03</span>
+            <span class="layer-name">Boss</span>
+            <span class="layer-meter"><i></i></span>
+            <span class="layer-state">+ counterline</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="below">
+        <article class="note">
+          <p class="eyebrow">The split that matters</p>
+          <h2>ML offline. Rules on the beat.</h2>
+          <p>
+            Generating a layer is a production problem. Scheduling it is a runtime problem.
+            The arranger can take its time; the conductor issues the command one bar early,
+            so the transition lands on a downbeat every time.
+          </p>
+        </article>
+        <article class="metric-card">
+          <p class="eyebrow">The research target</p>
+          <div class="metric">70%</div>
+          <p>
+            Blind preference for generated layers over the industry-standard mute/filter
+            baseline. This is a target, not a measured result.
+          </p>
+          <p class="muted">First slice: four hand-authored layers and the runtime. The arranger comes next.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <span>UnderScore / adaptive music study</span>
+      <span>Built by Georgios Kandilas</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

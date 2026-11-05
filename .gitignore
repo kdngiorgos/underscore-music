@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Data and model artifacts
+data/
+models/
+checkpoints/
+runs/
+*.pt
+*.pth
+*.onnx
+
+# Generated demo artifacts
+outputs/
+web/generated/
+
+# Environment and editors
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+package-lock.json

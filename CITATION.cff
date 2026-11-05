@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use UnderScore, cite this repository."
+title: "UnderScore: theme-preserving adaptive music layers"
+type: software
+authors:
+  - family-names: "Kandilas"
+    given-names: "Georgios"
+repository-code: "https://github.com/kdngiorgos/underscore-music"
+url: "https://kdngiorgos.github.io/underscore-music/"
+license: MIT
+date-released: "2026-11-05"
+abstract: >-
+  UnderScore studies offline generation of synchronized intensity layers from a
+  composer's theme, with a deterministic, bar-quantized game-side conductor.
