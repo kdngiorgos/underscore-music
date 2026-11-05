@@ -1,6 +1,10 @@
 # UnderScore
 
+[![CI](https://github.com/kdngiorgos/underscore-music/actions/workflows/ci.yml/badge.svg)](https://github.com/kdngiorgos/underscore-music/actions/workflows/ci.yml)
+
 **One theme. Every intensity.**
+
+[Live demo](https://kdngiorgos.github.io/underscore-music/web/) · [Research](research/RESEARCH.md) · [Architecture](docs/ARCHITECTURE.md)
 
 UnderScore is a composer-side adaptive-music study. A composer writes a theme once; the system produces four synchronized intensity layers and a game-side conductor schedules each transition on the next bar. The model belongs offline in production. The runtime is deliberately rule-based and sample-accurate.
 

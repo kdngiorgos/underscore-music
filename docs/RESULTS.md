@@ -9,7 +9,8 @@ No trained-arranger result exists yet. This file will be the only place where a 
 | Four loop-locked mixes | pass | `uv run underscore render --output web/stems` |
 | Mix duration | pass | 19.2 s at 44.1 kHz, 8 bars at 100 BPM |
 | Conductor rule tests | pass | `uv run pytest` |
-| Audio decode in Chromium | pass | browser reports “Score ready” |
+| Audio decode in Chromium | pass | browser reports “Score ready”; `scripts/verify_demo.mjs` |
+| Runtime gain schedule | pass | start gains exploration=1, boss transition gains boss=1 |
 | Next-bar scheduling | implemented | one-bar lookahead in `web/app.js` |
 | ML preference over B1 | not measured | model not built |
 
