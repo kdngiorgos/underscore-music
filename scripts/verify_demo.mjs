@@ -2,7 +2,8 @@ import { chromium } from "playwright";
 
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } });
-await page.goto("http://localhost:8766/");
+const url = process.argv[2] ?? "http://localhost:8766/";
+await page.goto(url);
 await page.waitForTimeout(2500);
 const before = await page.evaluate(() => ({
   status: document.querySelector("#status")?.textContent,
